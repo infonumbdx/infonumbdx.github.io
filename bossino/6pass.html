@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Boss</title>
+    <meta charset="utf-8" />
+      <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+      <script src="js/boss.js"></script>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link rel="stylesheet" href="css/styles.css">
+      <style>
+          body{
+              cursor:text;
+          }
+      </style>
+      
+  </head>
+  <body>
+      <header>
+        BOSS
+      </header>
+    
+      <div class="Wrapper">
+          <p>Le mot de passe est <span class="invisible">ESCARPIT</span></p>
+          <p class="bg-color">à trouver dans le code source</p>
+      </div>
+      
+      <div class="Wrapper">
+       
+        <div class="Input">
+            <input type="text" id="answerValue" class="Input-text" placeholder="Réponse...">
+            <label for="input" class="Input-label">Pressez Entrée pour valider</label>
+        </div>
+        <p class="alert alert-danger">Mauvaise réponse !</p>
+    </div>
+    
+    </body>
+   <script> 
+       $(document).on('keypress',function(e) {
+            if(e.which == 13) {
+                console.log("ENTER");
+                testAnswer(7);
+            }
+        });
+    </script>
+</html>
