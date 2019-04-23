@@ -1,9 +1,5 @@
-html, body{
-    margin:0px;
-    padding:0px;
-}
-
 @import url('https://fonts.googleapis.com/css?family=Dosis');
+@import url('https://fonts.googleapis.com/css?family=Alegreya');
 
 :root {
   /* generic */
@@ -15,7 +11,8 @@ html, body{
   --colorPrimary400: #00BFB3;
   --colorPrimary600: #00988f;
   --colorPrimary800: #00726b;
-  --fontFamily: "Dosis", sans-serif;
+    --colorDark: #333333;
+  --fontFamily: "Alegreya", serif;
   --fontSizeSm: 1.2rem;
   --fontSizeMd: 1.6rem;
   --fontSizeLg: 2.1rem;
@@ -44,6 +41,13 @@ html, body{
     
 }
 
+html, body{
+    margin:0px;
+    padding:0px;
+    color: var(colorPrimary800);
+}
+
+
 *,
 *::before,
 *::after {
@@ -60,18 +64,18 @@ html {
 }
 
 body {
-  display: flex;
+    display: flex;
     flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  width: 100vw;
-  height: 100vh;
-  color: #455A64;
-  background-color: var(--colorPrimary400);
-  font-family: var(--fontFamily);
-  font-size: var(--fontSizeMd);
-  line-height: var(--lineHeightMd);
+    align-items: center;
+    justify-content: center;
+    /*overflow: hidden;*/
+    width: 100vw;
+    min-height: 100vh;
+    color: var(--colorDark);
+    background-color: var(--colorPrimary400);
+    font-family: var(--fontFamily);
+    font-size: var(--fontSizeMd);
+    line-height: var(--lineHeightMd);
 }
 
 header{
@@ -94,6 +98,19 @@ header{
     max-width:900px;
     padding-left: 20px;
     padding-right: 20px;
+}
+
+.h400{
+    height:400px;
+}
+
+.hWrapper{
+    display: flex;
+    justify-content: center;
+}
+.rot{
+    transform: rotate(-3deg);
+    margin-right: 50px;
 }
 
 .Input {
@@ -155,6 +172,9 @@ header{
 .small{
     max-width:500px;
 }
+.xs{
+    max-width:300px;
+}
 
 .Input-text:not(:placeholder-shown) + .Input-label,
 .Input-text:focus:not(:placeholder-shown) + .Input-label {
@@ -197,4 +217,16 @@ header{
 
 .invisible{
     display: none;
+}
+.lead{
+    font-size:2rem;
+}
+.rounded{
+    border-radius:15px;
+}
+.btn-xl{
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    line-height: 1.5;
+    border-radius: .3rem;
 }

@@ -37,7 +37,8 @@ $(function(){
 
     function testAnswer(index){
         var answerValue = $("#answerValue").val().toLowerCase().removeAccents();
-        if(answer[index].toLowerCase().removeAccents()==answerValue){
+        if(answer[index].toLowerCase().removeAccents().search(answerValue)>=0 || answerValue.search(answer[index].toLowerCase().removeAccents())>=0){
+        //if(answer[index].toLowerCase().removeAccents()==answerValue){
             //console.log(target[index]);
             //window.location.href(target[index]);
             $(location).attr('href',target[index]);
